@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+// var a = 5;
+// var b= "+";
+// var c= 10;
+// var x = document.getElementById("myBtn");
+// x.addEventListener("click", myFunction);
+// x.addEventListener("click", mySecondFunction);
+// x.addEventListener("click", myThirdFunction);
+
+// function myFunction() {
+//   document.getElementById("demo").innerHTML = a ;
+//   document.getElementById("demo").removeEventListener("click", myFunction);
+// }
+
+// function mySecondFunction() {
+//   document.getElementById("demo").innerHTML = a + b ;
+//   document.getElementById("demo").removeEventListener("click", mySecondFunction);
+// }
+
+// function myThirdFunction() {
+//   document.getElementById("demo").innerHTML += a + b + c;
+// }
+myFunction();
+myFunction2()
+var car ;
+function myFunction() {
+var carName = "BMW";
+car = "Volvo";
+console.log(car)
+} 
+function myFunction2() {
+var carName = "Tata";
+car = "Volvo";
+console.log(car)
+} 
+</script>
+
+</body>
+</html>
+
+<!--  var a;
+  var b;
+  var c;
+  document.getElementById("number").addEventListener("click", number1);
+
+  function number1(event) {
+    a = event.target.getAttribute("value");
+    document.getElementById("screen").innerHTML = a;
+    console.log(a);
+  }
+
+
+  document.getElementById("operation").addEventListener("click", (event) => {
+    b = event.target.getAttribute("value");
+    document.getElementById("screen").innerHTML = a + " " + b;
+  })
+
+  document.getElementById("number").addEventListener("click", number2);
+  function number2(event) {
+    document.getElementById("number").removeEventListener("click", number1);
+    c = event.target.getAttribute("value");
+    document.getElementById("screen").innerHTML = a + " " + b + " " + c;
+  };
+
+     document.getElementById("equal").addEventListener("click", (event) => {
+       var solution = a + b + c ;
+       document.getElementById("screen").innerHTML = solution;
+     })-->
+
+
+
+     // MAIN CODE
+     document.addEventListener("DOMContentLoaded", ()=>{
+      document.getElementById("number").addEventListener("click", number1);
+  var a = "";
+  var b = "";
+  var c = "";
+      function number1(event) {
+          if (b === "" ) {
+              a = Number(event.target.getAttribute("value"));
+              numberOne = Number(document.getElementById("screen").innerHTML += a);
+              console.log("numberOne: " + numberOne);
+          } else{
+              c = Number(event.target.getAttribute("value"));
+              numberTwo = Number(document.getElementById("screen").innerHTML += c);
+              console.log("numberTwo: " + numberTwo);
+          }
+      }
+  
+      document.getElementById("operation").addEventListener("click", (event) => {
+          b = event.target.getAttribute("value");
+          operationAndSecondNUmber = document.getElementById("screen").innerHTML = b;
+          console.log("2: " + b);
+      })
+      
+  })
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     // question = document.getElementById("screen").innerHTML;
+     // operator = b.substring(0, 1);
+     // numberTwo = Number(question.substring(1));
+ 
+     // console.log("question: " + question);
+     // console.log("numberOne: " + numberOne);
+     // console.log("operator: " + operator);
+     // console.log("numberTwo: " + numberTwo);
+     // question = document.getElementById("screen").innerHTML;
+     // console.log(question);
+ 
+     // // document.getElementById("number").removeEventListener("click", number1);
+     // //  document.getElementById("number").addEventListener("click", (event) => {
+     // //          c = Number(event.target.getAttribute("value"));
+     // //          numberTwo = document.getElementById("screen").innerHTML += c;
+     // //          console.log(numberTwo);
+     // //  });
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     document.getElementById("equal").addEventListener("click", (event) => {
+ 
+         var solution = proof();
+         console.log(solution);
+         document.getElementById("screen").innerHTML = solution;
+     })
+     function proof() {
+         if (b === "+") {
+             return numberOne + numberTwo;
+         }
+     }
